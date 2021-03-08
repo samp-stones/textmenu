@@ -1,6 +1,6 @@
 #include <a_samp>
 
-/*Textdraws & Variables*///
+/*Textdraws & Variables*///////
 static PlayerText:J_TMenu[MAX_PLAYERS][2],
 MenuID[MAX_PLAYERS],pHasItems[MAX_PLAYERS];
 
