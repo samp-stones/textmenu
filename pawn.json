@@ -1,0 +1,9 @@
+{
+	"user": "samp-stones",
+	"repo": "textmenu",
+	"entry": "textmenu.pwn",
+	"output": "textmenu.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib"
+	]
+}
