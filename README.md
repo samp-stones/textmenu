@@ -61,3 +61,71 @@ To test, simply run the package:
 ```bash
 sampctl package run
 ```
+
+##  Functions
+
+```pawn
+TextMenuShowForPlayer(playerid,menuid,header[],content[],items=0)
+TextMenuHideForPlayer(playerid) 
+```
+
+## Callbacks
+```pawn
+forward OnTextMenuResponse(playerid,menuid,listitem); 
+```
+
+## Example
+
+```pawn
+CMD:test(playerid)
+{
+    new Test[600],bool:necessary = true;
+    if(necessary)
+    {
+          strcat(Test,"~y~1-~w~ Message 1~n~");
+          strcat(Test,"~y~2-~w~ Message 2~n~");
+          strcat(Test,"~y~3-~w~ Message 3~n~");
+          strcat(Test,"~y~4-~w~ Message 4~n~");
+          strcat(Test,"~y~5-~w~ Message 5~n~");
+          strcat(Test,"~y~6-~w~ Message 6");
+          necessary = false;
+     }
+     TextMenuShowForPlayer(playerid,0,"Items",Test,6);
+     return 1;
+}
+
+public OnTextMenuResponse(playerid,menuid,listitem)
+{
+     if(menuid == 0)
+     {
+          switch(listitem)
+          {
+                case 1:
+                {
+                      //Your code
+                }
+                case 2:
+                {
+                      //Your stuff
+                }
+                case 3:
+                {
+                      //Your code
+                }
+                case 4:
+                {
+                      //Your code
+                }
+                case 5:
+                {
+                      //Your code
+                }
+                case 6:
+                {
+                      //Your code
+                }    
+          }       
+     }
+     return 1;    
+} 
+```
