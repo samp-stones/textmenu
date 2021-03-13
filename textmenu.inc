@@ -162,3 +162,4 @@ stock TextMenuHideForPlayer(playerid)
 #if defined J_OnPlayerKeyStateChange
 	forward J_OnPlayerKeyStateChange(playerid, newkeys, oldkeys);
 #endif
+//
